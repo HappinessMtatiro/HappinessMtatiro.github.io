@@ -71,3 +71,12 @@ nav img{
   line-height: 35px;
   margin: auto;
   }
+.success{
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 67px;
+}
