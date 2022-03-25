@@ -17,24 +17,24 @@
     <!-- header section -->
 
     <section class="header">
-      <nav >
+      <nav>
         <a href="index.html"><img src="images/femi_2_logo-20.png" /></a>
         <div class="nav-links">
           <ul>
             <li>
-              <a href="#"><b>ABOUT US</b></a>
+              <a href="about.html"><b>ABOUT US</b></a>
             </li>
             <li>
-              <a href="#"><b>MEMBERSHIP</b></a>
+              <a href="membership.html"><b>MEMBERSHIP</b></a>
             </li>
             <li>
-              <a href=""><b>EVENTS</b></a>
+              <a href="events.html"><b>EVENTS</b></a>
             </li>
+            <!-- <li>
+              <a href="resourses.html"><b>RESOURSES</b></a>
+            </li> -->
             <li>
-              <a href=""><b>RESOURSES</b></a>
-            </li>
-            <li>
-              <a href=""><b>DONATE</b></a>
+              <a href="donante.html"><b>DONATE</b></a>
             </li>
           </ul>
         </div>
@@ -73,6 +73,35 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <!-- <img src="images/femi 11.jpg" style="width: 100%" /> -->
+          <div class="text">
+            <h3>Our Goal</h3>
+            <p>To empower young ladies</p>
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <!-- <img src="images/femi 11.jpg" style="width: 100%" /> -->
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides">
+          <!-- <img src="images/femi 11.jpg" style="width: 100%" /> -->
+          <!-- <div class="text align-content-center">Caption Three</div> -->
+        <!-- </div> -->
+        <h4> happiness laurent</h4>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
     <!-- Copyright Bar -->
     <section class="copyright ptb-15">
       <div class="container">
@@ -86,11 +115,28 @@
     </section>
     <!-- End Copyright Bar -->
 
-    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
   </body>
 </html>
