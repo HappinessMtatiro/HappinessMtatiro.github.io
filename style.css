@@ -4,6 +4,9 @@
   padding: 0;
   font-family: "Poppins" san-serif;
 }
+/*==============================================================================================*/
+/* TO COVER  ||---------------------------- */
+/*==============================================================================================*/
 .header {
   min-height: 100vh;
   width: 100%;
@@ -23,10 +26,14 @@ nav{
   padding: 30px 65px;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  z-index: -1;
+  background-color: #323232;
+  height: 120px;
 }
 nav img {
-  width: 150px;
-  height: 120px;
+  width: 130px;
+  height: 110px;
 }
 .nav-links {
   text-align: right;
@@ -101,12 +108,23 @@ p {
   padding: 20px 15px;
   box-sizing: border-box;
   margin-right: 10%;
+  transition: 0.5s;
 }
 h3 {
   text-align: center;
   font-weight: 300;
   margin: 10px 0;
 }
+.success-col:hover{
+  box-shadow: 0 0 20px 0 rgb(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700) {
+  .row{
+    flex-direction: column;
+  }
+}
+
 /*==============================================================================================*/
 /* FOOTER         ||---------------------------- */
 /*==============================================================================================*/
