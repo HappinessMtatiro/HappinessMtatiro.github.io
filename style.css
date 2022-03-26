@@ -27,7 +27,6 @@ nav{
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  z-index: -1;
   background-color: #323232;
   height: 120px;
 }
